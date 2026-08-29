@@ -1,4 +1,6 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'
+// `??` (not `||`) so an intentionally empty string — relative /api requests, routed
+// through the dev proxy or a same-origin reverse proxy in prod — isn't treated as unset.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8080'
 
 /** RFC 7807 problem+json body shape the backend returns on error. */
 export interface ProblemDetails {
