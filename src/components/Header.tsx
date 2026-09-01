@@ -18,9 +18,13 @@ export function Header() {
 
   return (
     <header className="flex items-center justify-between gap-4 border-b border-neutral-200 px-4 py-3 dark:border-neutral-800">
-      <div className="flex items-center gap-4">
-        <span className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Planner</span>
-        <span className="text-sm text-neutral-500 dark:text-neutral-400">{monthLabel}</span>
+      <div className="flex items-center gap-3">
+        <span className="rounded-md bg-indigo-600 px-2.5 py-1 text-sm font-semibold text-white dark:bg-indigo-500">
+          Planner
+        </span>
+        <span className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">
+          {monthLabel}
+        </span>
       </div>
 
       <nav className="flex items-center gap-1" aria-label="Views">
